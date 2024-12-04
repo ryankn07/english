@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;  
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .media {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .media-item {
+            flex: 1 1 calc(33.333% - 20px);
+            margin-bottom: 20px;
+        }
+        .media-item img {
+            width: 100%;
+            height: auto;
+        }
+        .media-item p {
+            margin-top: 10px;
+            text-align: justify;
+        }
+        audio {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <article>
+            <h2>Tiêu Đề Bài Báo</h2>
+            <audio controls>
+                <source src="example.mp3" type="audio/mp3">
+                Trình duyệt của bạn không hỗ trợ âm thanh.
+            </audio>
+            <p>Đây là đoạn văn mở đầu của bài báo, giới thiệu tổng quan về nội dung mà bạn muốn chia sẻ với độc giả.</p>
+            <div class="media">
+                <div class="media-item">
+                    <img src="job.jpg" alt="Ảnh 1">
+                    <p>Nội dung mô tả cho ảnh 1. Đây là một mô tả ngắn về ảnh này.</p>
+                </div>
+                <div class="media-item">
+                    <img src="example2.jpg" alt="Ảnh 2">
+                    <p>Nội dung mô tả cho ảnh 2. Đây là một mô tả ngắn về ảnh này.</p>
+                </div>
+                <div class="media-item">
+                    <img src="softwere.jpg" alt="Ảnh 3">
+                    <p>Nội dung mô tả cho ảnh 3. Đây là một mô tả ngắn về ảnh này.</p>
+                </div>
+                <div class="media-item">
+                    <img src="example4.jpg" alt="Ảnh 4">
+                    <p>Nội dung mô tả cho ảnh 4. Đây là một mô tả ngắn về ảnh này.</p>
+                </div>
+                <div class="media-item">
+                    <img src="example5.jpg" alt="Ảnh 5">
+                    <p>Nội dung mô tả cho ảnh 5. Đây là một mô tả ngắn về ảnh này.</p>
+                </div>
+                <div class="media-item">
+                    <img src="example6.jpg" alt="Ảnh 6">
+                    <p>Nội dung mô tả cho ảnh 6. Đây là một mô tả ngắn về ảnh này.</p>
+                </div>
+            </div>
+            <p>Đây là đoạn văn kết thúc bài báo, cung cấp thêm thông tin chi tiết và kết luận về chủ đề đã thảo luận.</p>
+        </article>
+    </div>
+</body>
+</html>
