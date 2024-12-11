@@ -3,125 +3,157 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Two skills I want to learn</title>
+    <meta name="description" content="A simple page discussing skills I want to learn, including programming and English speaking.">
+    <title>Two Skills I Want to Learn</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Lora:wght@400;700&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #34495e;
+            --text-color: #ecf0f1;
+            --accent-color: #1abc9c;
+        }
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
+
         body {
             font-family: 'Roboto', sans-serif;
-            background: linear-gradient(to bottom, #f4f4f4, #e8e8e8);
+            background: linear-gradient(to bottom, var(--primary-color), var(--secondary-color));
             line-height: 1.6;
             overflow-x: hidden;
+            color: var(--text-color);
         }
+
         nav {
-            background: #D3D3D3;
+            background: var(--secondary-color);
             color: white;
             padding: 10px 0;
             position: sticky;
             top: 0;
             z-index: 1000;
         }
+
         nav ul {
             list-style: none;
             text-align: center;
         }
+
         nav ul li {
             display: inline-block;
             margin: 0 15px;
         }
+
         nav ul li a {
             text-decoration: none;
             color: white;
             font-weight: bold;
             font-size: 1.1em;
         }
+
         nav ul li a:hover {
             text-decoration: underline;
+            color: var(--accent-color);
+            transition: color 0.3s ease;
         }
+
         .container {
             width: 80%;
             margin: auto;
-            overflow: hidden;
             padding: 20px;
-            background: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background: #3b5998;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
             animation: fadeIn 1.5s ease-in-out;
         }
+
         .media {
             display: flex;
             flex-wrap: wrap;
             gap: 20px;
             margin: 20px 0;
         }
+
         .media-item {
             flex: 1 1 calc(33.333% - 20px);
-            margin-bottom: 20px;
         }
+
         .media-item img {
-            width: 100%; 
+            width: 100%;
             height: 200px;
             object-fit: cover;
             border-radius: 10px;
             border: 2px solid #ddd;
             transition: transform 0.3s ease;
+            loading: lazy;
         }
+
         .media-item img:hover {
             transform: scale(1.05);
         }
+
         .media-item p {
             margin-top: 10px;
             text-align: left;
-            white-space: normal;
         }
+
         audio {
             width: 100%;
             margin-bottom: 20px;
         }
+
         footer {
             text-align: center;
-            background: #333;
+            background: var(--primary-color);
             color: white;
             padding: 20px 0;
             margin-top: 20px;
         }
+
         footer ul {
             list-style: none;
             padding: 0;
         }
+
         footer ul li {
             display: inline-block;
             margin: 0 10px;
         }
+
         footer ul li a {
             color: white;
             text-decoration: none;
         }
+
         footer ul li a:hover {
             text-decoration: underline;
         }
+
         .snowflake {
-            position: absolute;
+            position: fixed;
             top: -10px;
             color: white;
             font-size: 10px;
             pointer-events: none;
             animation: fall linear infinite;
         }
+
         @keyframes fall {
             0% {
-                transform: translateY(0) rotate(0deg);
+                transform: translateY(-100px) rotate(0deg);
             }
             100% {
                 transform: translateY(100vh) rotate(360deg);
             }
         }
+
         html {
             scroll-behavior: smooth;
         }
+
         @keyframes fadeIn {
             from {
                 opacity: 0;
@@ -132,11 +164,13 @@
                 transform: translateY(0);
             }
         }
+
         @media (max-width: 768px) {
             .container {
                 width: 100%;
                 padding: 10px;
             }
+
             .media {
                 flex-direction: column;
             }
@@ -162,53 +196,58 @@
             </audio>
             <p>Hello everyone. Today, I will tell you about two skills I want to learn after finishing school: language and computer skills. Now, let's talk about computer first.</p>
             <h2 id="section2">Why I Choose Computer Skill As Web Designer</h2>
-       <p>As you can see =))), it interesting</p> 
+            <p>As you can see, it is interesting.</p>
             <div class="media">
                 <div class="media-item">
                     <img src="hire.webp" alt="Programmer at Work">
-                    <p><strong>High Demand and Job Security</strong>: With technology becoming an integral part of our lives, the demand for skilled programmers continues to rise. Companies across various industries need programmers to develop and maintain their software, ensuring excellent job security.</p>
+                    <p><strong>High Demand and Job Security:</strong> With technology becoming an integral part of our lives, the demand for skilled programmers continues to rise. Companies across various industries need programmers to develop and maintain their software, ensuring excellent job security.</p>
                 </div>
                 <div class="media-item">
                     <img src="sala.png" alt="Attractive Salaries">
-                    <p><strong>Attractive Salaries</strong>: Programming is one of the best-paying careers. Due to the high demand for talent, programmers often enjoy competitive salaries and excellent benefits, making it a lucrative field.</p>
+                    <p><strong>Attractive Salaries:</strong> Programming is one of the best-paying careers. Due to the high demand for talent, programmers often enjoy competitive salaries and excellent benefits, making it a lucrative field.</p>
                 </div>
                 <div class="media-item">
                     <img src="hoctap.webp" alt="Continuous Learning">
-                    <p><strong>Continuous Learning and Growth</strong>: Technology is always evolving, and as a programmer, you'll constantly learn new languages and tools. This constant growth keeps the job interesting and fulfilling as you stay updated with the latest advancements.</p>
+                    <p><strong>Continuous Learning and Growth:</strong> Technology is always evolving, and as a programmer, you'll constantly learn new languages and tools. This constant growth keeps the job interesting and fulfilling as you stay updated with the latest advancements.</p>
                 </div>
             </div>
-            <h2 id="section3">Why Learn English </h2>
+            <h2 id="section3">Why Learn English</h2>
             <div class="media">
                 <div class="media-item">
                     <img src="enqt.webp" alt="Global Communication">
-                    <p><strong>Communicate with International Colleagues</strong>: English is the lingua franca of the tech world. Knowing English allows you to communicate effectively with colleagues, clients, and communities worldwide, opening doors to international opportunities.</p>
+                    <p><strong>Communicate with International Colleagues:</strong> English is the lingua franca of the tech world. Knowing English allows you to communicate effectively with colleagues, clients, and communities worldwide, opening doors to international opportunities.</p>
                 </div>
                 <div class="media-item">
                     <img src="ec.jpg" alt="Cultural Exchange">
-                    <p><strong>Cultural Exchange</strong>: Learning English allows you to engage in cultural exchanges, understand different perspectives, and build relationships with people from diverse backgrounds, enriching your personal and professional life.</p>
+                    <p><strong>Cultural Exchange:</strong> Learning English allows you to engage in cultural exchanges, understand different perspectives, and build relationships with people from diverse backgrounds, enriching your personal and professional life.</p>
                 </div>
                 <div class="media-item">
                     <img src="pd.jpg" alt="Personal Development">
-                    <p><strong>Personal Development</strong>: Learning English boosts cognitive skills, enhances your ability to think critically, and improves overall communication skills, which are valuable in any career path.</p>
+                    <p><strong>Personal Development:</strong> Learning English boosts cognitive skills, enhances your ability to think critically, and improves overall communication skills, which are valuable in any career path.</p>
                 </div>
             </div>
             <p>In conclusion, pursuing a career in programming offers numerous benefits, from job security and attractive salaries to continuous learning. Additionally, learning English can further enhance your career by improving communication, access to resources, and collaboration opportunities. I encourage you all to consider programming as a career and to continuously seek out new skills that will help you succeed in this ever-evolving world. Thank you!</p>
         </article>
     </div>
+
     <script>
         const snowContainer = document.getElementById("snow-container");
         const totalSnowflakes = 55;
 
-        for (let i = 0; i < totalSnowflakes; i++) {
+        function createSnowflake() {
             const snowflake = document.createElement("div");
             snowflake.classList.add("snowflake");
             snowflake.innerHTML = "&#10052;";
-            snowflake.style.left = Math.random() * 100 + "vw";
-            snowflake.style.animationDuration = Math.random() * 5 + 5 + "s";
+            snowflake.style.left = `${Math.random() * 100}vw`;
+            snowflake.style.animationDuration = `${Math.random() * 5 + 5}s`;
             snowflake.style.opacity = Math.random();
-            snowflake.style.fontSize = Math.random() * 10 + 10 + "px";
+            snowflake.style.fontSize = `${Math.random() * 10 + 10}px`;
             snowContainer.appendChild(snowflake);
+            snowflake.addEventListener('animationend', () => {
+                snowflake.remove();
+            });
         }
+        setInterval(createSnowflake, 200);
     </script>
-  </body>
+</body>
 </html>
