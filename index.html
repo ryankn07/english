@@ -95,28 +95,6 @@
             text-decoration: underline;
         }
 
-        /* Snowflake styles */
-        .snowflake {
-            position: fixed;
-            top: -10px;
-            color: white;
-            font-size: 1rem;
-            opacity: 0.8;
-            pointer-events: none;
-            animation: fall 5s linear infinite;
-        }
-
-        @keyframes fall {
-            0% {
-                transform: translateY(-100px);
-                opacity: 1;
-            }
-            100% {
-                transform: translateY(100vh);
-                opacity: 0.5;
-            }
-        }
-
         html {
             scroll-behavior: smooth;
         }
@@ -140,6 +118,26 @@
 
             .media {
                 flex-direction: column;
+            }
+        }
+
+        /* Snowflake Style */
+        .snowflake {
+            position: fixed;
+            top: -10px;
+            left: 0;
+            color: white;
+            font-size: 10px;
+            pointer-events: none;
+            animation: fall linear infinite;
+        }
+
+        @keyframes fall {
+            0% {
+                transform: translateY(-10px) rotate(0deg);
+            }
+            100% {
+                transform: translateY(100vh) rotate(360deg);
             }
         }
     </style>
@@ -177,7 +175,7 @@
                     <p>Third and final, I want to learn code because I like it, that's all :))</p>
                 </div>
             </div>
-<p>Hmm, it's time to talk about the second skill I chose, language.</p>
+            <p>Hmm, it's time to talk about the second skill I chose, language.</p>
             <h2 id="section3">Why Learn English</h2>
             <div class="media">
                 <div class="media-item">
@@ -197,21 +195,22 @@
     </div>
 
     <script>
-        // Generate snowflakes
-        const snowContainer = document.getElementById('snow-container');
-        const snowflakeCount = 100;
-        const snowflakeSymbols = ['❄', '❅', '✻', '✼', '❆'];
-
-        for (let i = 0; i < snowflakeCount; i++) {
+        function createSnowflake() {
             const snowflake = document.createElement('div');
-            snowflake.className = 'snowflake';
-            snowflake.innerText = snowflakeSymbols[Math.floor(Math.random() * snowflakeSymbols.length)];
-            snowflake.style.left = `${Math.random() * 100}vw`;
-            snowflake.style.animationDuration = `${Math.random() * 3 + 5}s`;
-            snowflake.style.fontSize = `${Math.random() * 1 + 0.8}rem`;
-            snowflake.style.animationDelay = `${Math.random() * 5}s`;
-            snowContainer.appendChild(snowflake);
+            snowflake.classList.add('snowflake');
+            snowflake.textContent = '❄';
+            snowflake.style.left = Math.random() * 100 + 'vw';
+            snowflake.style.animationDuration = Math.random() * 3 + 2 + 's';
+            snowflake.style.opacity = Math.random();
+            snowflake.style.fontSize = Math.random() * 10 + 10 + 'px';
+            document.body.appendChild(snowflake);
+
+            setTimeout(() => {
+                snowflake.remove();
+            }, 5000);
         }
+
+        setInterval(createSnowflake, 100);
     </script>
 </body>
 </html>
