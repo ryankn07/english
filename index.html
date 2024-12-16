@@ -73,43 +73,6 @@
         .media {
             display: flex;
             flex-wrap: wrap;
-            gap: 20px;
-            margin: 20px 0;
-        }
-
-        .media-item {
-            flex: 1 1 calc(33.333% - 20px);
-        }
-
-        .media-item img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 10px;
-            border: 2px solid #ddd;
-            transition: transform 0.3s ease;
-            loading: lazy;
-        }
-
-        .media-item img:hover {
-            transform: scale(1.05);
-        }
-
-        .media-item p {
-            margin-top: 10px;
-            text-align: left;
-        }
-
-        audio {
-            width: 100%;
-            margin-bottom: 20px;
-        }
-
-        footer {
-            text-align: center;
-            background: var(--primary-color);
-            color: white;
-            padding: 20px 0;
             margin-top: 20px;
         }
 
@@ -132,21 +95,25 @@
             text-decoration: underline;
         }
 
+        /* Snowflake styles */
         .snowflake {
             position: fixed;
             top: -10px;
             color: white;
-            font-size: 10px;
+            font-size: 1rem;
+            opacity: 0.8;
             pointer-events: none;
-            animation: fall linear infinite;
+            animation: fall 5s linear infinite;
         }
 
         @keyframes fall {
             0% {
-                transform: translateY(-100px) rotate(0deg);
+                transform: translateY(-100px);
+                opacity: 1;
             }
             100% {
-                transform: translateY(100vh) rotate(360deg);
+                transform: translateY(100vh);
+                opacity: 0.5;
             }
         }
 
@@ -228,5 +195,23 @@
             </div>
         </article>
     </div>
+
+    <script>
+        // Generate snowflakes
+        const snowContainer = document.getElementById('snow-container');
+        const snowflakeCount = 100;
+        const snowflakeSymbols = ['❄', '❅', '✻', '✼', '❆'];
+
+        for (let i = 0; i < snowflakeCount; i++) {
+            const snowflake = document.createElement('div');
+            snowflake.className = 'snowflake';
+            snowflake.innerText = snowflakeSymbols[Math.floor(Math.random() * snowflakeSymbols.length)];
+            snowflake.style.left = `${Math.random() * 100}vw`;
+            snowflake.style.animationDuration = `${Math.random() * 3 + 5}s`;
+            snowflake.style.fontSize = `${Math.random() * 1 + 0.8}rem`;
+            snowflake.style.animationDelay = `${Math.random() * 5}s`;
+            snowContainer.appendChild(snowflake);
+        }
+    </script>
 </body>
 </html>
