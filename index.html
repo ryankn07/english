@@ -227,15 +227,20 @@
             </div>
         </article>
     </div>
-  <script>
-     function createSnowflake() {
+    <footer>
+        <p>Two Skills I Want to Learn | Cầm 12A4</p>
+        <ul>
+            <li><a href="#section1">Audio</a></li>
+            <li><a href="#section2">Programmer</a></li>
+            <li><a href="#section3">English</a></li>
+        </ul>
+    </footer>
+    <script>
+        function createSnowflake() {
             const snowflake = document.createElement('div');
             const snowflakeSymbols = ['❄', '❅', '✻', '✼', '❆'];
             snowflake.classList.add('snowflake');
-            snowflake.textContent = '❄';
-            snowflake.textContent = '❅';
-            snowflake.textContent = '✻';
-            snowflake.textContent = '❆';
+            snowflake.textContent = snowflakeSymbols[Math.floor(Math.random() * snowflakeSymbols.length)];
             snowflake.style.left = Math.random() * 100 + 'vw';
             snowflake.style.animationDuration = Math.random() * 5 + 5 + 's';
             snowflake.style.opacity = Math.random();
